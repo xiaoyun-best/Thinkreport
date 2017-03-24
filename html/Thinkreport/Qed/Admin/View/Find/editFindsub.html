@@ -1,0 +1,34 @@
+<div class="title_right"><strong>{$menuname}
+    </tr></strong></div>  
+<div style="width:900px;margin:auto;">
+  <form method="post" action="__URL__/editFindsub"  enctype="multipart/form-data">
+    <table>
+      <tbody>
+      <input type="hidden"name="id" value="{$val.tblfindingsub_id}" />
+      <input type="hidden"name="tblfinding_ID" value="{$tblfinding_ID}" />
+      <tr>
+        <td align="right">子标题:</td>
+        <td align="left"><input name="tblfindingsub_subtitle" type="text" value="{$val['tblfindingsub_subtitle']}"/></td>
+      </tr>
+      <tr>
+        <td align="right">检查所见:</td>
+        <td align="left"><textarea name="tblfindingsub_finding" cols="60" rows="35" style="width: 200px; height: 100px;">{$val['tblfindingsub_finding']}</textarea> </td>
+      </tr>
+      <tr>
+        <td align="right">诊断意见:</td>
+        <td align="left"><textarea name="tblfindingsub_suggest" cols="60" rows="35" style="width: 200px; height: 100px;">{$val['tblfindingsub_suggest']}</textarea></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="page_btm">
+      <input type="submit" class="btn_b" value="提交" />
+    </div>
+  </form>
+</div>
+</div>
+<script type="text/javascript">
+//返回上一页
+$('.gohistory').on('click',function(){
+    window.history.go(-1);
+})
+</script>

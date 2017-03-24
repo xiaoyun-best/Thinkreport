@@ -1,0 +1,72 @@
+<div class="title_right"><strong>修改密码：</strong></div>  
+<div style="width:900px;margin:auto;">
+  <table>
+    <tbody>
+    <form method="post" action="__URL__/editpsd" name='editpsd' enctype="multipart/form-data">    
+    <tr>
+      <td align="right">原密码:</td>
+      <td align="left"><input name="oldpwd" type="password"/></td>
+    </tr>
+    <tr>
+      <td align="right">新密码:</td>
+      <td align="left"><input name="newpwd" type="password"/></td>
+    </tr>
+    <tr>
+      <td align="right">确认密码:</td>
+      <td align="left"><input name="renewpwd" type="password"/></td>
+    </tr>
+  </tbody>
+</table>
+<div class="page_btm">
+      <input type="button" class="btn_b" value="提交" />
+    </div>
+
+</div>
+</div>
+<script type="text/javascript">
+//验证原密码是否正确
+$('[name=oldpwd]').on('change',function(e){
+	var oldpwd=$('[name=oldpwd]').val();
+	//console.log(oldpwd);
+	$.ajax({
+                      type:'post',
+                      url:'__URL__/checkpwd',
+                      dataType:'json',
+                      data:{'oldpwd':oldpwd},
+	         success:function(req){
+		           console.log(req);
+		           if(req.status==0){
+		           	 alert('原密码不正确！！！');
+		           	 return false;
+		           }  
+	         } 
+	});
+});
+//验证两次密码是否一致	
+ $('[name=renewpwd]').on('change',function(){	 
+ var newpwd=$('[name=newpwd]').val();
+ var renewpwd=$('[name=renewpwd]').val();	
+  	if( newpwd!=renewpwd){
+	      alert('两次密码不一致！！！');
+	      return false;
+	    }
+  });
+  $('.btn_b').on('click',function(){
+   var oldpwd=$('[name=oldpwd]').val();
+   var newpwd=$('[name=newpwd]').val();
+   var renewpwd=$('[name=renewpwd]').val();
+    if(!oldpwd){
+      alert('请输入原密码！！！');
+      return false;
+    }
+    if(!newpwd){
+      alert('请输入新密码！！！');
+      return false;
+    }
+    if(!renewpwd){
+      alert('请输入确认密码！！！');
+      return false;
+    }
+    $('[name=editpsd]').submit();
+  });
+</script>

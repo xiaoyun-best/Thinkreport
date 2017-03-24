@@ -1,0 +1,72 @@
+<div class="right"  id="mainFrame">
+<div class="right_cont">
+<ul class="breadcrumb">当前位置：
+  <a href="#">用户管理</a> 
+  <span class="pull-right margin-bottom-5 gohistory" style='cursor:pointer;color:#000;'>返回上一级</span> 
+</ul>
+<div class="title_right"><span class="pull-right margin-bottom-5"><a  class="btn btn-info btn-small"  id="modal-9735581" href="{:U('User/editUser',array('menuname'=>'添加用户'))}" role="button" ><i class="icon-plus icon-white"></i>添加用户</a></span><strong>用户列表</strong></div>
+<form method="get" name='form'>
+      <table style="width:100%;">
+        <tr align="left">
+        <td  align="left" nowrap="nowrap" bgcolor="#f1f1f1" >
+        <!-- 商户类型：<select style="padding:0;" name='type'>
+           <foreach name='classes' key='key' item='value'>
+           <php>if($_GET['type']==$key){</php>
+             <option align='center' value='{$key}' selected="">{$value}</option>
+           <php>}else{</php>
+             <option align='center' value='{$key}'>{$value}</option>
+           <php>}</php>
+          </foreach>
+        </select> -->
+        用户名：<input type="search" name='tbluser_loginname'  value="{$_GET['tbluser_loginname']}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        显示名：<input type="search" name='tbluser_displayname'  value="{$_GET['tbluser_displayname']}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="查询" class="tijiao btn btn-info " style="width:80px;" /></td>
+       </tr>
+      </table>
+</form>
+
+<table class="table table-bordered table-striped table-hover">
+     <tbody>
+       <tr align="center">
+         <td nowrap="nowrap sort" style="width:25%;"><strong>登录名</strong></td>
+         <td nowrap="nowrap" style="width:25%;"><strong>显示名</strong></td>
+           <td nowrap="nowrap" style="width:25%;"><strong>角色</strong></td>
+         <td width="140" nowrap="nowrap" style="width:25%;"><strong>操作</strong></td>
+         </tr>
+      <if condition="$list">
+       <foreach name="list" item="val" >
+       <tr align="center" class='itemChange'>
+         <td nowrap="nowrap">{$val['tbluser_loginname']}</td>
+         <td nowrap="nowrap">{$val['tbluser_displayname']}</td>
+           <td nowrap="nowrap">{$val['tbluser_role']}</td>
+         <td nowrap="nowrap"><input type="hidden" class='id' value="{$val.tbluser_id}" />
+             <a href="{:U('User/editRole',array('id'=>$val['tbluser_id']))}">【设置角色】</a>
+             <a href="{:U('User/editUser',array('menuname'=>'修改用户','id'=>$val['tbluser_id']))}">【修改】</a>&nbsp;&nbsp;
+             <a class='delete' style="cursor:pointer;">【删除】</a>
+        </tr>
+        </foreach>
+        <tr align="center" class='itemChange'>
+        <td colspan="4">{$page}</td>
+        </tr>
+        <else />
+          <tr align="center" class='itemChange'><td colspan="5" style="color:red;">暂无菜单</td></tr>
+        </if>
+     </tbody>
+   </table>
+</div>
+</div>
+<script type="text/javascript">
+//返回上一页
+$('.gohistory').on('click',function(){
+    window.history.go(-1);
+})
+$('.tijiao').on('click',function(){
+  $('[name=form]').submit();
+})
+$('.delete').on('click',function(){
+  if(confirm('确定要删除吗？')){
+    var id=$(this).parents('.itemChange').find('.id').val();
+    window.location.href='__URL__/del/id/'+id;
+  }
+})
+</script>

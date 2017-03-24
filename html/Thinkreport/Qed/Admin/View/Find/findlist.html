@@ -1,0 +1,69 @@
+<div class="right"  id="mainFrame">
+<div class="right_cont">
+<ul class="breadcrumb">当前位置：
+  <a href="#">文字模板管理</a>
+  <span class="pull-right margin-bottom-5 gohistory" style='cursor:pointer;color:#000;'>返回上一级</span> 
+</ul>
+<div class="title_right">
+<span class="pull-right margin-bottom-5">
+<a  class="btn btn-info btn-small"  id="modal-9735581" href="{:U('Find/editFind',array('menuname'=>'添加文字模板'))}" role="button" ><i class="icon-plus icon-white"></i>添加所见标题
+</a>
+</span>
+<strong>所见意见</strong>
+</div>
+<form method="get" name='form'>
+      <table style="width:100%;">
+        <tr align="left">
+        <td  align="left" nowrap="nowrap" bgcolor="#f1f1f1" >
+        所见标题：<input type="search" name='tblfinding_title' value="{$_GET['tblfinding_title']}" />
+        <input type="button" value="查询" class="tijiao btn btn-info " style="width:80px;" /></td>
+       </tr>
+      </table>
+</form>
+
+<table class="table table-bordered table-striped table-hover">
+     <tbody>
+       <tr align="center">
+         <td nowrap="nowrap sort" style="width:25%;"><strong>ID</strong></td>
+         <td nowrap="nowrap" style="width:25%;"><strong>所见标题</strong></td>
+         <td nowrap="nowrap" style="width:25%;"><strong>所见用户(0:公有，非0:私有)</strong></td>
+         <td width="140" nowrap="nowrap" style="width:25%;"><strong>操作</strong></td>
+         </tr>
+      <if condition="$list">
+       <foreach name="list" item="val" >
+       <tr align="center" class='itemChange'>
+         <td nowrap="nowrap">{$val['tblfinding_id']}</td>
+         <td nowrap="nowrap">{$val['tblfinding_title']}</td>
+         <td nowrap="nowrap">{$val['tbluser_id']}</td>
+         <td nowrap="nowrap">
+         <input type="hidden" class='id' value="{$val.tblfinding_id}" />
+	         <a href="{:U('Find/findsub',array('tblfinding_ID'=>$val['tblfinding_id']))}">【所见内容】</a>&nbsp;&nbsp;
+	         <a href="{:U('Find/editFind',array('menuname'=>'修改文字模板','id'=>$val['tblfinding_id']))}">【修改】</a>&nbsp;&nbsp;
+	         <a class='delete' style="cursor:pointer;">【删除】</a>
+        </tr>
+        </foreach>
+        <tr align="center" class='itemChange'>
+        <td colspan="4">{$page}</td>
+        </tr>
+        <else />
+          <tr align="center" class='itemChange'><td colspan="5" style="color:red;">暂无菜单</td></tr>
+        </if>
+     </tbody>
+   </table>
+</div>
+</div>
+<script type="text/javascript">
+//返回上一页
+$('.gohistory').on('click',function(){
+    window.history.go(-1);
+})
+$('.tijiao').on('click',function(){
+  $('[name=form]').submit();
+})
+$('.delete').on('click',function(){
+  if(confirm('确定要删除吗？')){
+    var id=$(this).parents('.itemChange').find('.id').val();
+    window.location.href='__URL__/del/id/'+id;
+  }
+})
+</script>

@@ -1,0 +1,52 @@
+<div class="title_right"><strong>{$menuname}：
+    </tr></strong></div>
+<div style="width:900px;margin:auto;">
+    <form method="post" action="__URL__/editMenu" enctype="multipart/form-data">
+        <table>
+            <tbody>
+            <input type="hidden"name="id" value="{$val.tblmenu_id}" />
+            <tr>
+                <td align="right">上级菜单：</td>
+                <td align="left">
+                    <select style="padding:0;" name='tblmenu_PID'>
+                        <option  value='0' selected="">顶级菜单</option>
+                        <foreach name="menu" item="value">
+                            <php>if($pid == $value['tblmenu_id']){</php>
+                            <option value="{$value['tblmenu_id']}" selected="selected">{$value['tblmenu_name']}</option>
+                            <php>}else{</php>
+                            <option value="{$value['tblmenu_id']}">{$value['tblmenu_name']}</option>
+                            <php>}</php>
+                            <!--<option value="{$value['tblmenu_id']}">{$value['tblmenu_name']}</option>-->
+                        </foreach>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">菜单名称:</td>
+                <td align="left"><input name="tblmenu_name" type="text" value="{$val['tblmenu_name']}"/></td>
+            </tr>
+            <tr>
+                <td align="right">菜单地址:</td>
+                <td align="left"><input name="tblmenu_url" type="text" value="{$val['tblmenu_url']}"/></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page_btm">
+            <input type="submit" class="btn_b" value="提交" />
+        </div>
+    </form>
+</div>
+</div>
+<script type="text/javascript">
+    //返回上一页
+    $('.gohistory').on('click',function(){
+        window.history.go(-1);
+    })
+    $('[name=tblmenu_url]').on('click',function(){
+        PID=$('[name=tblmenu_PID]').val();
+        if(PID==0){
+            $('[name=tblmenu_url]').attr("disabled",'disabled');
+            //$('[name=tblmenu_url]').removeAttr("disabled");
+        }
+    })
+</script>

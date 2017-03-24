@@ -1,0 +1,27 @@
+<div class="title_right"><strong>{$menuname}
+    </tr></strong></div>  
+<div style="width:900px;margin:auto;">
+    <form method="post" action="__URL__/editTracer"  enctype="multipart/form-data">
+        <table>
+            <tbody>
+            <input type="hidden"name="id" value="{$val.tbltracer_id}" />
+            <tr>
+                <td align="right">示踪器:</td>
+                <td align="left">
+                    <input name="tbltracer_tracer" type="text" value="{$val['tbltracer_tracer']}"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page_btm">
+            <input type="submit" class="btn_b" value="提交" />
+        </div>
+    </form>
+</div>
+</div>
+<script type="text/javascript">
+//返回上一页
+$('.gohistory').on('click',function(){
+    window.history.go(-1);
+})
+</script>

@@ -1,0 +1,47 @@
+<div class="title_right"><strong>{$menuname}：{$user['tbluser_loginname']}
+    </tr></strong></div>  
+<div style="width:900px;margin:auto;">
+  <form method="post" action=""  enctype="multipart/form-data">
+    <table>
+      <tbody>
+      <input type="hidden"name="id" value="{$user.tbluser_id}" />
+      <tr>
+        <td align="right">登录名:</td>
+        <td align="left"><input name="tbluser_loginname" type="text" value="{$user['tbluser_loginname']}"/></td>
+      </tr>
+      <tr>
+        <td align="right">显示名:</td>
+        <td align="left"><input name="tbluser_displayname" type="text" value="{$user['tbluser_displayname']}"/></td>
+      </tr>
+      <tr>
+        <td align="right">密码:</td>
+        <td align="left"><input name="tbluser_password" type="password" value="{$user['tbluser_password']}"/></td>
+      </tr>
+      <tr>
+        <td align="right">确认密码:</td>
+        <td align="left"><input name="re_password" type="password" value="{$user['tbluser_password']}"/></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="page_btm">
+      <input type="submit" class="btn_b" value="提交" />
+    </div>
+  </form>
+
+</div>
+</div>
+<script type="text/javascript">
+//返回上一页
+$('.gohistory').on('click',function(){
+    window.history.go(-1);
+})
+//验证两次密码是否一致 
+ $('[name=re_password]').on('change',function(){  
+ var tbluser_password=$('[name=tbluser_password]').val();
+ var re_password=$('[name=re_password]').val(); 
+    if( tbluser_password!=re_password){
+        alert('两次密码不一致！！！');
+        return false;
+      }
+  });
+</script>
