@@ -1,0 +1,6 @@
+position 4
+0
+insert data successfully!
+area is 2468.9297
+volume is 29.7747
+weight is 29.7747

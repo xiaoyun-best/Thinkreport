@@ -1,0 +1,2 @@
+position 0
+ {"dicomid":"5200e446-b0036635-e90816c9-205f3fe5-6c4619e1","left_density":"1","right_density":"1","raiu_2h":"0.29","raiu_24h":"0.7","AIU":"3.5","coord":"76 64 199 199","url":"http:\/\/192.168.1.54\/orthanc\/instances\/5200e446-b0036635-e90816c9-205f3fe5-6c4619e1\/file","url2":"http:\/\/localhost\/orthanc\/instances","url3":"http:\/\/192.168.1.54\/Qedyii\/web\/trans\/resmsg","id":"10"} 

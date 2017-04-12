@@ -1,0 +1,64 @@
+甲状腺项目接口文档
+该项目通过自动勾画dicom图片的感兴趣区域计算甲状腺面积、体积、重量、吸碘率，并返回标记有感兴趣区域的dicom图片和带有参数的url地址。
+从前端接受数据为jason格式数据，其中包括：
+图片id：      		"dicomid": "d04db765-6d50c2cb-7f096af0-fed011d3-6d1a6363",
+左侧密度：		"left_density":"1"，（甲状腺项目特有）
+右侧密度：		"right_density":"1", （甲状腺项目特有）
+方框坐标：		"coord":"74 65 205 204",
+服务器图片地址：	"url":"http://192.168.1.128/pic/1.jpg",
+服务器roi图片地址：	"url2":"http://192.168.1.128/pic/1.jpg",
+参数输出地址：		"url3":"http://192.168.1.128/pic/1.jpg"，
+
+数据输出包含3个部分：
+1：从服务器端下载下来的图片需要通过函数qed_pacs_get_dicom(url)输出在本地端临时文件"./temp.dcm"文件中。
+2：勾画出roi区域的dicom图片需要通过函数[ ret,retinfo ] = qed_pacs_upload_dicom( file_struct.dcmname,url2)上传至服务器端。
+3：数据库请求参数需要通过函数webwrite(url3, data)函数写入传参地址url3中。其中data数据格式为：data = ['ndicomid=',tempjson.ID,'&id=', sid]。
+
+附录：
+chg_called_json(json_str)
+将json_str中的字符串类型转换为数值类型
+
+qed_pacs_get_dicom(dicom_url)
+从dicom_url下载图片图片到当前目录./temp.dcm中。
+
+rect = getValidImgRect(dcmfile)
+从图片dcmfile中自动识别一个方框 (xmin, ymin, width, height)返回至rect
+
+rect = resort(corner(1), corner(2), corner(3), corner(4))
+将方框的四个坐标点转化为 (xmin, ymin, width, height)返回至rect
+
+blurImage(im)
+将图片im模糊化处理
+
+svmmask = svm(dcmfileBlur, mask, 1000, 0.1, false)
+勾勒dcmfileBlur图片的感兴趣区域。mask为遮罩初始值;1000为最大迭代步数;返回值svmmask为感兴趣区域。
+
+[leftmask0, rightmask0, spx] = SeperationLR(svmmask0)
+将svmmask0分成左右两部分;leftmask0和rightmask0分别为左侧和右侧mask; spx为左右分界线的x坐标;
+
+bgThreshold = getBackground(dcmfile,rect,svmmask)
+从图片dcmfile和方框rect和感兴趣区域svmmask中计算出背景阈值。
+
+getArea(dcminfo,dcmfileMasked)
+根据roi计算面积，dcminfo是dcm文件的文件头
+
+[ret,retinfo, mix_img]  = qed_img_mask2contour( svmmask0, dcmfile, maxvalue)
+将roi区域的边界和原文件dcmfile融合为mix_img。需要参数maxvalue，maxvalue为max(dcmfile(:))
+
+[ ret,retinfo ] =qed_pacs_create_dicom( mix_img,file_struct);
+创建dcm图片mix_img，并且写在文件file_struct.dcmname。
+file_struct:
+    file_struct.PatientID = dcminfo.PatientID;
+    file_struct.PatientName = dcminfo.PatientName.FamilyName;
+    file_struct.StudyID = dcminfo.StudyID;
+    file_struct.dcmname = './temp_out.dcm';
+
+
+[ ret,retinfo ] = qed_pacs_upload_dicom( file_struct.dcmname,out_url)
+文件file_struct.dcmname上传至out_url
+
+
+left_vol = getVolumeByPoly1(dcminfo, left_dcmfilemask, iur);
+计算体积
+
+

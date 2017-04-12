@@ -1,0 +1,3 @@
+position 3
+tempjson ID is 566f8f85-65fb9e9f-b42c2c6d-3535be7b-2300b60a
+ndicomid=566f8f85-65fb9e9f-b42c2c6d-3535be7b-2300b60a&id=10&area=2468.9297&left_area=1165.4157&right_area=1303.514&vol=29.7747&left_vol=12.8268&right_vol=16.9479&weight=29.7747&left_weight=12.8268&right_weight=16.9479&left_depth=11.0062&right_depth=13.0017&left_tiur=0.17232&right_tiur=0.22768&therapy_bq=148.8735&aquization_duration=219.541&raiu_2h=0.29&raiu_24h=0.7

@@ -1,0 +1,6 @@
+position 1
+http://192.168.1.54/orthanc/instances/5200e446-b0036635-e90816c9-205f3fe5-6c4619e1/file
+http://localhost/orthanc/instances
+http://192.168.1.54/Qedyii/web/trans/resmsg
+sid is 10
+corner 1 is 76.000000
