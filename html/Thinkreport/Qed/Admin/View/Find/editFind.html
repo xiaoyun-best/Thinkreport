@@ -1,0 +1,30 @@
+<div class="right"  id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">&nbsp;
+            <span class="pull-right margin-bottom-5 gohistory" style='cursor:pointer;color:#000;'>返回上一级</span>
+        </ul>
+        <div class="title_right"><strong>{$menuname}：
+            </tr></strong>
+        </div>
+        <form method="post" action="__URL__/editFind" name='editpsd' enctype="multipart/form-data">
+            <table>
+                <tbody>
+                <input type="hidden"name="id" value="{$vol.tblfinding_id}" />
+                <tr>
+                    <td align="right">所见标题:</td>
+                    <td align="left"><input name="tblfinding_title" type="text" value="{$vol['tblfinding_title']}"/></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="page_btm">
+                <input type="submit" class="btn_b" value="提交" />
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+//返回上一页
+$('.gohistory').on('click',function(){
+    window.history.go(-1);
+})
+</script>

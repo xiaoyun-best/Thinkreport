@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{margin:0;padding:0;}
+img, a img, input{vertical-align:middle;}
+img, a img, button {border:0;cursor:pointer;}
+table, td ,th, tr{border-collapse:collapse;border:0;}
+ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:14px;}
+a{color:#333333;text-decoration:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.clear{ clear:both}
+.fz{ font-size:16px; font-weight:bold;}
+.bkd{background:#fff;}
+.btm{ border-bottom:1px solid #bfbfbf;}
+
+
+/*检查结果表格*/
+.check-center{ width:1000px; margin:0 auto; border-left:1px solid #bfbfbf; border-right:1px solid #bfbfbf; background:#e4e4e4;}
+.check-title{height:50px; line-height:50px; text-align:center;}
+.check-title1{height:35px; line-height:35px; padding-left:10px; margin-bottom:5px;}
+.check-title2{height:50px; line-height:50px; padding-left:10px; margin-bottom:5px; border-top:1px solid #bfbfbf;}
+.check-list{ border-top:1px solid #bfbfbf; position:relative; padding-bottom:10px; margin-bottom:5px;}
+.check-list h3{ padding-left:65px; line-height:35px;}
+.check-list ul{ font-size:12px; padding-left:110px;}
+.check-list ul li{ line-height:30px;}
+.check-upload{ width:190px; height:80px; position:absolute; top:40px; right:50px;  font-size:12px; font-weight:bold;}
+.check-upload p{ padding-bottom:5px;}
+.check-upload p span{ padding-left:10px;}
+.check-upload p .file{ width:95px; height:25px; text-align:center; line-height:25px; border-radius:3px; border:none; margin:0 10px;}
+.check-upload p .file.h{ background:#e2e2e2; color:#aaa}
+.check-upload p .file.l{ background:#06a8eb; color:#fff}
+.check-btn{ width:1000px; margin:0 auto;}
+.check-btn div.r{ text-align:right; padding:30px 0;}
+.check-btn div.r input{ width:140px; line-height:40px; height:40px; color:#FFF; text-align:center; background:#f85f3d; border:0; border-radius:3px;}
+.check-btn div.l{ text-align:left; padding:30px 10px;}
+.check-btn div.l input{ width:160px; height:35px; line-height:35px; border:1px solid #b9b9b9; margin:0 10px;}
+.check-layer{ width:100%; height:100%; position:fixed; top:0; left:0; background:#000;filter:alpha(opacity=50); -moz-opacity:0.5; opacity:0.5; display:none;}
+.check-Eject{ width:605px; height:325px; padding:25px; background:#FFF; position:fixed; top:200px; left:50%; margin-left:-305px; display:none;}
+.check-Eject input{ height:35px; line-height:35px; text-align:center; color:#FFF; font-weight:bold; border:0; border-radius:3px;}
+.check-Eject input.sl{ background:#0495be; width:170px; margin-right:40px;}
+.check-Eject input.h{ background:#eb6100; width:210px; margin-right:40px;}
+.check-Eject input.l{ background:#00a1eb; width:210px;}
+.check-Eject textarea{ width:580px; height:160px; margin:30px 0; padding:10px;}
+
+/*我的预约头部*/
+
+/*我的预约分页*/
+.content-footer{float:right;margin:15px 0; }
+.content-footer-btns,.content-footer-btns li,.content-footer-number{float: left;}
+.content-footer-btns li{width:25px;height:25px;line-height: 25px;text-align: center;margin:0 2px;font-family:"宋体";}
+.content-footer-btns{margin-right: 15px;}
+.content-footer-no{width:23px;height:23px;line-height: 23px;text-align: center;margin:0 2px;}
+.content-footer-btns li a{border:1px solid #ccc; display:block;}
+.content-footer-btns li.current a{background-color:#ff5d39;border:0;}
+
+/*我的预约弹窗*/
+.rstion-Eject{ width:550px; height:170px; padding:50px; background:#FFF; position:fixed; top:200px; left:50%; margin-left:-305px; border-radius:5px; display:none;}
+.rstion-Eject .tx{ width:50px;}
+.rstion-Eject .nr{ width:500px;}
+.rstion-Eject .tx,.rstion-Eject .nr{ float:left; font-size:16px; color:#dd2709; line-height:24px;}
+.rstion-Eject .tj{ padding-top:50px; text-align:center;}
+.rstion-Eject .tj input{ width:140px; height:40px; color:#fff; font-size:16px; border:0; border-radius:5px; margin:0 30px;}
+.rstion-Eject .tj input.h{ background:#8d8d8d;}
+.rstion-Eject .tj input.l{ background:#1295bb;}
+
+/*我的预约底部*/
+.footer{height:500px;width:100%;background-image:url(../images/footer.jpg);background-size:100% 100%;text-align: center;display: table;color:#fff;}
+.footer:before{content:"";}
+.footer-image{margin-top:65px;margin-bottom: 80px;}
+.footer-erweima{width:130px;height:115px;background-color:#000;margin:0 auto 25px;}
+.footer-sina{margin-top:10px;}
+.footer-sina i{display: inline-block;width:32px;height:32px;background-image: url(../images/sina.jpg);background-size:100% 100%; vertical-align: middle;margin-right: 5px;}
+.footer-sina a{color:#fff;}

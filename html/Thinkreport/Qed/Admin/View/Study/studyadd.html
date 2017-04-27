@@ -1,0 +1,393 @@
+<style type="text/css">
+    body,p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dt,table,tr,td,th,form,input,select,textarea{
+        padding:0;
+        margin:0;
+    }
+</style>
+<div class="right"  id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">&nbsp;
+            <span class="pull-right margin-bottom-5 gohistory" style='cursor:pointer;'>返回上一级</span>
+        </ul>
+        <div class="title_right">
+            <strong>登记信息</strong>
+        </div>
+        <div id="modal-container-9735581" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:600px; margin-left:-300px; top:20%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">
+                    添加报告
+                </h3>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                    <form method="post"  name='form' enctype="multipart/form-data">
+                        <tr>
+                            <td align="right">检索条件</td>
+                            <td align="left">
+                                <select name="type" style="width:190px;">
+                                <foreach name='classes' item='c'>
+                                    <option value="{$key}">{$c}</option>
+                                </foreach></td>
+                        </tr>
+                        <tr>
+                            <td align="right">所属属性：</td>
+                            <td align="left"><select name="type" style="width:190px;" >
+                                <foreach name='classes' item='c'>
+                                    <option value="{$key}">{$c}</option>
+                                </foreach>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td align="right">报告图片:</td>
+                            <td align="left"><input name="image" type="file" value="0" class="span1-1" accept="image/*"/></td>
+                        </tr>
+                    </form>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-info" data-dismiss="modal" aria-hidden="true" style="width:80px">保存</button>
+                <button class="btn btn-info" data-dismiss="modal" aria-hidden="true" style="width:80px">取消</button>
+            </div>
+        </div>
+        <!-- 添加 -->
+            <form method="post" action="__URL__/studyadd" name='cform' enctype="multipart/form-data">
+            <table>
+                <tbody>
+                <tr>
+                    <!--左边表格-->
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td align="right">检索条件</td>
+                                    <td align="left">
+                                        <select name="condition" style="width:163px" >
+                                            <foreach name='classes' item='c'>
+                                                <option value="{$key}">{$c}</option>
+                                            </foreach>
+                                            <option value="{$key}">住院号</option>
+                                            <option value="{$key}">门诊号</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">&nbsp;</td>
+                                    <td align="left"><input name="content" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">病历号</td>
+                                    <td align="left"><input name="tblpatient_PID" type="text"></td></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">姓名*</td>
+                                    <td align="left"><input name="tblpatient_name" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">性别*</td>
+                                    <td align="left">
+                                        <select name="tblpatient_sex" style="width:163px;">
+                                            <foreach name="sexs" item="sex">
+                                                <option value="{$key}">{$sex}</option>
+                                            </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">年龄*</td>
+                                    <td align="left"><input name="age" type="text" ></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">生日</td>
+                                    <td align="left"><input name="tblpatient_birthday" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">住院号</td>
+                                    <td align="left"><input name="tblstudy_hospitalizedID" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">门诊号</td>
+                                    <td align="left"><input name="tblstudy_outpatientID" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">检查类型</td>
+                                    <td align="left"><input name="tblstudy_modality" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">科室*</td>
+                                    <td align="left">
+                                        <select name="tbldepartment_ID" style="width:163px;">
+                                            <option value=""></option>
+                                            <foreach name='department' item='depart'>
+                                                <option value="{$depart.tbldepartment_id}">{$depart.tbldepartment_department}</option>
+                                            </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">示踪剂*</td>
+                                    <td align="left">
+                                        <select name="tbltracer_ID" style="width:163px;">
+                                            <option value=""></option>
+                                            <foreach name='tracer' item='trac'>
+                                                <option value="{$trac.tbltracer_id}">{$trac.tbltracer_tracer}</option>
+                                            </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">剂量(mCi)*</td>
+                                    <td align="left"><input name="tblstudy_dose" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">登记时间</td>
+                                    <td align="left"><input name="tblpatient_tm"  value="{$time}" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">检查时间</td>
+                                    <td align="left"><input name="tblstudy_studyDate" value="{$time}" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">病理结果</td>
+                                    <td align="left"><input name="tblstudy_pathological" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">医嘱</td>
+                                    <td align="left">
+                                        <textarea name="tblstudy_doctoradvice" cols="60" rows="35" style="width: 162px; height: 80px;">{$vol['tblfindingsub_finding']}</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">收费情况</td>
+                                    <td align="left">
+                                        <select name="tblstudy_ischarges" style="width:163px;">
+                                            <foreach name="changes" item="change">
+                                                <option value="{$key}">{$change}</option>
+                                            </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!--左边表格-->
+                    <!--右边表格-->
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr >
+                                    <td align="right">&nbsp; </td>
+                                    <td align="left" rowspan="2"><a class="btn btn-info" href="#modal-container-9735581" role="button" data-toggle="modal">连到hisi</a></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="right">检查号*</td>
+                                    <td align="left">
+                                        <input name="tblstudy_SID"type="text" >
+                                        <input name="build" value='1' type="checkbox">生成
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">姓名拼音*</td>
+                                    <td align="left"><input name="tblpatient_pinyin"type="text" ></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">身高(cm)</td>
+                                    <td align="left"><input name="tblpatient_height" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">体重(kg)*</td>
+                                    <td align="left"><input name="tblpatient_weight" type="text" ></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">电话</td>
+                                    <td align="left"><input name="tblpatient_tel" type="text" ></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">床号</td>
+                                    <td align="left"><input name="tblstudy_sickbedID" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">影像号</td>
+                                    <td align="left"><input name="tblstudy_imageID" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">血糖</td>
+                                    <td align="left"><input name="tblstudy_BloodSugarLevels" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">病区*</td>
+                                    <td align="left">
+                                        <select name="tblInpatientArea_ID" style="width:163px;">
+                                        <option value=""></option>
+                                        <foreach name='inpatientarea' item='area'>
+                                            <option value="{$area.tblinpatientarea_id}">{$area.tblinpatientarea_area}</option>
+                                        </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">检查项目*</td>
+                                    <td align="left">
+                                        <select name="tblInspectionItem_ID" style="width:163px;">
+                                            <option value=""></option>
+                                            <foreach name='inspectionitem' item='item'>
+                                                <option value="{$item.tblinspectionitem_id}">{$item.tblinspectionitem_item}</option>
+                                            </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">状态</td>
+                                    <td align="left">
+                                        <select name="tblstudy_reportState" style="width:163px;">
+                                            <option value=""></option>
+                                            <foreach name='statuscolor' item='status'>
+                                                 <option value="{$status.tblstatuscolor_id}">{$status.tblstatuscolor_name}</option>
+                                            </foreach>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">注射时间</td>
+                                    <td align="left"><input name="tblstudy_injectionDate" value="{$time}" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">临床诊断</td>
+                                    <td align="left"><input name="tblstudy_clinical" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">检查目的</td>
+                                    <td lign="left"><input name="tblstudy_s_destination" type="text"></td>
+                                </tr>
+                                <tr><td colspan="2">&nbsp;</td></tr>
+                                <tr><td colspan="2">&nbsp;</td></tr>
+                                <tr><td colspan="2">&nbsp;</td></tr>
+                                <tr><td colspan="2">&nbsp;</td></tr>
+                                <tr><td colspan="2">&nbsp;</td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!--右边表格-->
+                </tr>
+                <tr>
+                    <td rolspan="2">  <input type="button" class="btn btn-info tijiao" value="提交" /></td>
+                </tr>
+                <tbody>
+            </table>
+            </form>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    //返回上一页
+    $('.gohistory').on('click',function(){
+        window.history.go(-1);
+    })
+    //自动生成检查号
+    $('[name=build]').on('click',function(){
+        var attr = $('[name=build]').attr("checked");
+        if(attr == 'checked'){
+            $.ajax({
+                type:'post',
+                url:'__URL__/getBuildsid',
+                data:'',
+                datatype:'json',
+                success:function(req){
+                    $('[name=tblstudy_SID]').val(req.tblstudy_SID);
+                    $('[name=tblpatient_PID]').val(req.tblstudy_SID);
+                }
+            });
+        }
+    });
+    //根据年龄计算生日
+    $('[name=age]').on('change',function(){
+        var age = $('[name=age]').val();
+            $.ajax({
+                type:'post',
+                url:'__URL__/getBirthday',
+                data:{'age':age},
+                datatype:'json',
+                success:function(req){
+                    $('[name=tblpatient_birthday]').val(req.birthday);
+                }
+            });
+    });
+    //根据生日计算年龄
+    $('[name=tblpatient_birthday]').on('change',function(){
+        var tblpatient_birthday = $('[name=tblpatient_birthday]').val();
+        $.ajax({
+            type:'post',
+            url:'__URL__/getAge',
+            data:{'tblpatient_birthday':tblpatient_birthday},
+            datatype:'json',
+            success:function(req){
+                $('[name=age]').val(req.age);
+            }
+        });
+    });
+    //校验必填参数
+    $('.tijiao').on('click',function(){
+        var tblstudy_SID = $('[name=tblstudy_SID]').val();
+        if(!tblstudy_SID){
+            alert('请填写检查号');
+            return false;
+        }
+        var tblpatient_name = $('[name=tblpatient_name]').val();
+        if(!tblpatient_name){
+            alert('请填写姓名');
+            return false;
+        }
+        var tblpatient_pinyin = $('[name=tblpatient_pinyin]').val();
+        if(!tblpatient_pinyin){
+            alert('请填写拼音姓名');
+            return false;
+        }
+        var tblpatient_sex = $('[name=tblpatient_sex]').val();
+        if(!tblpatient_sex){
+            alert('请填写性别');
+            return false;
+        }
+        var age = $('[name=age]').val();
+        if(!age){
+            alert('请填写年龄');
+            return false;
+        }
+        var tblpatient_weight = $('[name=tblpatient_weight]').val();
+        if(!tblpatient_weight){
+            alert('请填写体重');
+            return false;
+        }
+        var tbldepartment_ID = $('[name=tbldepartment_ID]').val();
+        if(!tbldepartment_ID) {
+            alert('请填写科室');
+            return false;
+        }
+        var tblInpatientArea_ID = $('[name=tblInpatientArea_ID]').val();
+        if(!tblInpatientArea_ID){
+            alert('请填写病区');
+            return false;
+        }
+        var tbltracer_ID = $('[name=tbltracer_ID]').val();
+        if(!tbltracer_ID){
+            alert('请填写示踪剂');
+            return false;
+        }
+        var tblInspectionItem_ID = $('[name=tblInspectionItem_ID]').val();
+        if(!tblInspectionItem_ID){
+            alert('请填写检查项目');
+            return false;
+        }
+        var tblstudy_dose = $('[name=tblstudy_dose]').val();
+        if(!tblstudy_dose){
+            alert('请填写剂量');
+            return false;
+        }
+        $('[name=cform]').submit();
+    });
+
+</script>

@@ -1,0 +1,51 @@
+<div class="right"  id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">&nbsp;
+            <span class="pull-right margin-bottom-5 gohistory" style='cursor:pointer;color:#000;'>返回上一级</span>
+        </ul>
+        <div class="title_right"><strong>随访信息：
+            </tr></strong>
+        </div>
+            <form method="post" action="__URL__/flupedit" enctype="multipart/form-data">
+                <table>
+                    <tbody>
+                    <input type="hidden" name="id" value="{$vol.tblflup_id}" />
+                    <input type="hidden" name="tblpatient_ID" value="{$tblpatient_ID}" />
+                    <input type="hidden" name="tblstudy_ID" value="{$tblstudy_ID}" />
+                    <tr>
+                        <td align="right">随访状态</td>
+                        <td align="left">
+                            <input name="tblflup_state" type="radio" value="1" <if condition="$vol['tblflup_state']==1"> checked="checked"</if> >随访中
+                            <input name="tblflup_state" type="radio" value="2" <if condition="$vol['tblflup_state']==2"> checked="checked"</if> >随访完
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">随访时间</td>
+                        <td align="left"><input name="tblflup_date" value="{$vol['tblflup_date']}" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" type="text"></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td align="right">随访结果:</td>
+                        <td align="left"><textarea name="tblflup_Des" cols="60" rows="35" style="width:200px; height:100px;">{$vol['tblflup_des']}</textarea></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="page_btm">
+                    <input type="submit" class="btn_b" value="提交" />
+                </div>
+            </form>
+    </div>
+</div>
+<script type="text/javascript">
+    //返回上一页
+    $('.gohistory').on('click',function(){
+        window.history.go(-1);
+    })
+    $('[name=tblmenu_url]').on('click',function(){
+        PID=$('[name=tblmenu_PID]').val();
+        if(PID==0){
+            $('[name=tblmenu_url]').attr("disabled",'disabled');
+            //$('[name=tblmenu_url]').removeAttr("disabled");
+        }
+    })
+</script>

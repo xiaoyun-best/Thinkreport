@@ -1,0 +1,65 @@
+<div class="title_right"><strong>病史管理：
+    </tr></strong></div>
+<div style="width:900px;margin:auto;">
+    <form method="post" action="__URL__/medicaledit" enctype="multipart/form-data">
+        <table>
+            <tbody>
+            <input type="hidden" name="p_id" value="{$p_id}" />
+            <input type="hidden" name="tblMedicalHistory_ID" value="{$vol.tblmedicalhistory_id}" />
+            <tr>
+                <td align="right">主诉：</td>
+                <td align="left">
+                    <textarea name="tblMedicalHistory_ChiefComplaint" cols="60" rows="35" style="width:200px; height:60px;">{$vol.tblmedicalhistory_chiefcomplaint}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">现病史:</td>
+                <td align="left">
+                    <textarea name="tblMedicalHistory_now"  cols="60" rows="35" style="width:200px; height:60px;">{$vol.tblmedicalhistory_now}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">体征:</td>
+                <td align="left">
+                    <textarea name="tblMedicalHistory_past" cols="60" rows="35" style="width:200px; height:60px;">{$vol.tblmedicalhistory_past}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">既往史:</td>
+                <td align="left">
+                    <textarea name="tblMedicalHistory_signs" cols="60" rows="35" style="width:200px; height:60px;">{$vol.tblmedicalhistory_signs}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">辅助检查:</td>
+                <td align="left">
+                    <textarea name="tblMedicalHistory_study" cols="60" rows="35" style="width:200px; height:60px;">{$vol.tblmedicalhistory_study}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">其他:</td>
+                <td align="left">
+                    <textarea name="tblMedicalHistory_other" cols="60" rows="35" style="width:200px; height:60px;">{$vol.tblmedicalhistory_other}</textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page_btm">
+            <input type="submit" class="btn btn-info" value="提交" />
+        </div>
+    </form>
+</div>
+</div>
+<script type="text/javascript">
+    //返回上一页
+    $('.gohistory').on('click',function(){
+        window.history.go(-1);
+    })
+    $('[name=tblmenu_url]').on('click',function(){
+        PID=$('[name=tblmenu_PID]').val();
+        if(PID==0){
+            $('[name=tblmenu_url]').attr("disabled",'disabled');
+            //$('[name=tblmenu_url]').removeAttr("disabled");
+        }
+    })
+</script>

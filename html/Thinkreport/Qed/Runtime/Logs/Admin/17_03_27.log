@@ -1,0 +1,955 @@
+[ 2017-03-27T09:32:08+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8] Undefined index: qedLogin /var/www/html/Thinkreport/Qed/Admin/Controller/CommonController.class.php 第 6 行.
+
+[ 2017-03-27T09:32:08+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-03-27T09:32:08+08:00 ] ::1 /Admin/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2017-03-27T09:32:27+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000024s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `tbluser` WHERE (  tbluser_loginname='admin'  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tblrolenode` [ RunTime:0.0012s ]
+SQL: SELECT `tblrolenode_menu` FROM `tblrolenode` WHERE ( tblrolenode_RID=1 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-03-27T09:32:28+08:00 ] ::1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000020s ]
+
+[ 2017-03-27T09:41:58+08:00 ] ::1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2017-03-27T10:41:48+08:00 ] ::1 /Admin/Menu/menulist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8] Undefined index: qedLogin /var/www/html/Thinkreport/Qed/Admin/Controller/CommonController.class.php 第 6 行.
+
+[ 2017-03-27T10:41:48+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000037s ]
+
+[ 2017-03-27T10:41:48+08:00 ] ::1 /Admin/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2017-03-27T10:42:07+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tbluser` WHERE (  tbluser_loginname='admin'  ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-03-27T10:42:10+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000043s ]
+
+[ 2017-03-27T10:42:14+08:00 ] ::1 /Admin/Public/verify?t=0.49325455616998704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2017-03-27T10:42:20+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000029s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tbluser` WHERE (  tbluser_loginname='admin'  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tblrolenode` [ RunTime:0.0006s ]
+SQL: SELECT `tblrolenode_menu` FROM `tblrolenode` WHERE ( tblrolenode_RID=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000049s ]
+
+[ 2017-03-27T10:42:21+08:00 ] ::1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-03-27T10:43:05+08:00 ] ::1 /Admin/Tracer/tracerlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8] Undefined index: tbltracer_tracer /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tbltracer` [ RunTime:0.0097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbltracer` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 20 行.
+SQL: SELECT * FROM `tbltracer` ORDER BY tbltracer_ID DESC LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined index: tbltracer_tracer /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/62fd73abdd826df73f1a9041bd700ca4.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000023s ]
+
+[ 2017-03-27T10:43:10+08:00 ] ::1 /Admin/Tracer/tracerlist?tbltracer_tracer=p
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000030s ]
+SQL: SHOW COLUMNS FROM `tbltracer` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%p%' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 20 行.
+SQL: SELECT * FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%p%' ORDER BY tbltracer_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-03-27T10:46:27+08:00 ] ::1 /Admin/Tracer/tracerlist?tbltracer_tracer=p
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `tbltracer` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%p%' LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 20 行.
+SQL: SELECT * FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%p%' ORDER BY tbltracer_ID DESC LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000038s ]
+
+[ 2017-03-27T10:46:29+08:00 ] ::1 /Admin/Tracer/tracerlist?tbltracer_tracer=p
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `tbltracer` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%p%' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 20 行.
+SQL: SELECT * FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%p%' ORDER BY tbltracer_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000020s ]
+
+[ 2017-03-27T10:46:35+08:00 ] ::1 /Admin/Tracer/tracerlist?tbltracer_tracer=P
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+SQL: SHOW COLUMNS FROM `tbltracer` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%P%' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 20 行.
+SQL: SELECT * FROM `tbltracer` WHERE `tbltracer_tracer` LIKE '%P%' ORDER BY tbltracer_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2017-03-27T10:46:38+08:00 ] ::1 /Admin/Area/arealist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000042s ]
+NOTIC: [8] Undefined index: tblInpatientArea_area /var/www/html/Thinkreport/Qed/Admin/Controller/AreaController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tblinpatientarea` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblinpatientarea` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/AreaController.class.php 第 20 行.
+SQL: SELECT * FROM `tblinpatientarea` ORDER BY tblInpatientArea_ID DESC LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: tblInpatientArea_area /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/27194dc336702326a64d365e28074092.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002792s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000036s ]
+
+[ 2017-03-27T10:46:51+08:00 ] ::1 /Admin/Area/arealist?tblInpatientArea_area=%E5%8C%BA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000032s ]
+SQL: SHOW COLUMNS FROM `tblinpatientarea` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblinpatientarea` WHERE `tblInpatientArea_area` LIKE '%区%' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/AreaController.class.php 第 20 行.
+SQL: SELECT * FROM `tblinpatientarea` WHERE `tblInpatientArea_area` LIKE '%区%' ORDER BY tblInpatientArea_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2017-03-27T10:46:53+08:00 ] ::1 /Admin/Depart/departlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [8] Undefined index: tbldepartment_department /var/www/html/Thinkreport/Qed/Admin/Controller/DepartController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tbldepartment` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbldepartment` LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/DepartController.class.php 第 20 行.
+SQL: SELECT * FROM `tbldepartment` ORDER BY tbldepartment_ID DESC LIMIT 0,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined index: tbldepartment_department /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/293d2c4d9d85983b305da8e2e61cccab.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-03-27T10:47:01+08:00 ] ::1 /Admin/Depart/departlist?tbldepartment_department=%E7%A7%91
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000041s ]
+SQL: SHOW COLUMNS FROM `tbldepartment` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbldepartment` WHERE `tbldepartment_department` LIKE '%科%' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/DepartController.class.php 第 20 行.
+SQL: SELECT * FROM `tbldepartment` WHERE `tbldepartment_department` LIKE '%科%' ORDER BY tbldepartment_ID DESC LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002083s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000035s ]
+
+[ 2017-03-27T10:47:03+08:00 ] ::1 /Admin/Tracer/tracerlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: tbltracer_tracer /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tbltracer` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbltracer` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/TracerController.class.php 第 20 行.
+SQL: SELECT * FROM `tbltracer` ORDER BY tbltracer_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined index: tbltracer_tracer /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/62fd73abdd826df73f1a9041bd700ca4.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000028s ]
+
+[ 2017-03-27T10:47:03+08:00 ] ::1 /Admin/Item/itemlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined index: tblInspectionItem_item /var/www/html/Thinkreport/Qed/Admin/Controller/ItemController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tblinspectionitem` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblinspectionitem` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/ItemController.class.php 第 20 行.
+SQL: SELECT * FROM `tblinspectionitem` ORDER BY tblInspectionItem_ID DESC LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined index: tblInspectionItem_item /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/0e9eb0a8a114b774c3b1f65e1d61590e.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000021s ]
+
+[ 2017-03-27T10:47:13+08:00 ] ::1 /Admin/Item/itemlist?tblInspectionItem_item=%E7%A7%91
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+SQL: SHOW COLUMNS FROM `tblinspectionitem` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblinspectionitem` WHERE `tblInspectionItem_item` LIKE '%科%' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: field /var/www/html/Thinkreport/Qed/Admin/Controller/ItemController.class.php 第 20 行.
+SQL: SELECT * FROM `tblinspectionitem` WHERE `tblInspectionItem_item` LIKE '%科%' ORDER BY tblInspectionItem_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000049s ]
+
+[ 2017-03-27T10:47:15+08:00 ] ::1 /Admin/Menu/menulist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000024s ]
+SQL: SHOW COLUMNS FROM `tblmenu` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: tblmenu_name /var/www/html/Thinkreport/Qed/Admin/Controller/MenuController.class.php 第 13 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tblmenu` WHERE `tblmenu_PID` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tblmenu` WHERE `tblmenu_PID` = 0 ORDER BY tblmenu_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined index: tblmenu_name /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/d6c313af910975eccac6f0d08c38e101.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2017-03-27T10:47:30+08:00 ] ::1 /Admin/Menu/menulist?tblmenu_name=%E6%B5%8B%E8%AF%95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000025s ]
+SQL: SHOW COLUMNS FROM `tblmenu` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblmenu` WHERE `tblmenu_PID` = 0 AND `tblmenu_name` LIKE '%测试%' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tblmenu` WHERE `tblmenu_PID` = 0 AND `tblmenu_name` LIKE '%测试%' ORDER BY tblmenu_ID DESC LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000024s ]
+
+[ 2017-03-27T10:47:34+08:00 ] ::1 /Admin/Role/rolelist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8] Undefined index: tblrole_name /var/www/html/Thinkreport/Qed/Admin/Controller/RoleController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblrole` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tblrole` ORDER BY tblrole_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: search /var/www/html/Thinkreport/Qed/Admin/Controller/RoleController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined index: tblrole_name /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/52be5089d1cbd235c2fc21323e7479c4.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000032s ]
+
+[ 2017-03-27T10:47:42+08:00 ] ::1 /Admin/Role/rolelist?tblrole_name=%E7%AE%A1%E7%90%86%E5%91%98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tblrole` WHERE `tblrole_name` LIKE '%管理员%' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tblrole` WHERE `tblrole_name` LIKE '%管理员%' ORDER BY tblrole_ID DESC LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2017-03-27T10:47:45+08:00 ] ::1 /Admin/User/userlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: tbluser_loginname /var/www/html/Thinkreport/Qed/Admin/Controller/UserController.class.php 第 13 行.
+NOTIC: [8] Undefined index: tbluser_displayname /var/www/html/Thinkreport/Qed/Admin/Controller/UserController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tbluser` ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+NOTIC: [8] Undefined index: tbluser_loginname /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 131 行.
+NOTIC: [8] Undefined index: tbluser_displayname /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 132 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000023s ]
+
+[ 2017-03-27T10:48:00+08:00 ] ::1 /Admin/User/userlist?tbluser_loginname=yun&tbluser_displayname=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` WHERE `tbluser_loginname` LIKE '%yun%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tbluser` WHERE `tbluser_loginname` LIKE '%yun%' ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000029s ]
+
+[ 2017-03-27T10:48:08+08:00 ] ::1 /Admin/User/userlist?tbluser_loginname=&tbluser_displayname=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000027s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tbluser` ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0009s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000043s ]
+
+[ 2017-03-27T10:48:24+08:00 ] ::1 /Admin/User/userlist?tbluser_loginname=&tbluser_displayname=%E5%91%98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000038s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` WHERE `tbluser_displayname` LIKE '%员%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `tbluser` WHERE `tbluser_displayname` LIKE '%员%' ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000022s ]
+
+[ 2017-03-27T10:48:30+08:00 ] ::1 /Admin/User/userlist?tbluser_loginname=&tbluser_displayname=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000027s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tbluser` ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000026s ]
+
+[ 2017-03-27T11:30:59+08:00 ] ::1 /Admin/User/userlist?tbluser_loginname=&tbluser_displayname=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000043s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tbluser` ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 150 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2017-03-27T11:31:10+08:00 ] ::1 /Admin/User/editRole/id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `tbluser` WHERE ( tbluser_ID=33 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: user /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/f1d83d4ac00f4d674982dc73e033be8e.php 第 113 行.
+NOTIC: [8] Undefined variable: user /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/f1d83d4ac00f4d674982dc73e033be8e.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000027s ]
+
+[ 2017-03-27T11:31:14+08:00 ] ::1 /Admin/User/editRole/id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0004s ]
+SQL: UPDATE `tbluser` SET `tbluser_RID`='0' WHERE ( tbluser_ID=33 ) [ RunTime:0.0136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000020s ]
+
+[ 2017-03-27T11:31:15+08:00 ] ::1 /Admin/User/userlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: tbluser_loginname /var/www/html/Thinkreport/Qed/Admin/Controller/UserController.class.php 第 13 行.
+NOTIC: [8] Undefined index: tbluser_displayname /var/www/html/Thinkreport/Qed/Admin/Controller/UserController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbluser` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `tbluser` ORDER BY tbluser_seq DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Undefined variable: classes /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 125 行.
+NOTIC: [8] Undefined index: tbluser_loginname /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 131 行.
+NOTIC: [8] Undefined index: tbluser_displayname /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 132 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 150 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 151 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 150 行.
+NOTIC: [8] Undefined index: tbluser_role /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/cb5c80bbbaec09768ed2b27f73ebd834.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000022s ]
+
+[ 2017-03-27T11:31:46+08:00 ] ::1 /Admin/User/editRole/id/33.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+SQL: SHOW COLUMNS FROM `tbluser` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tblrole` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tbluser` WHERE ( tbluser_ID=33 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `tblrole_ID`,`tblrole_name` FROM `tblrole`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+NOTIC: [8] Undefined variable: user /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/f1d83d4ac00f4d674982dc73e033be8e.php 第 113 行.
+NOTIC: [8] Undefined variable: user /var/www/html/Thinkreport/Qed/Runtime/Cache/Admin/f1d83d4ac00f4d674982dc73e033be8e.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000019s ]
+
+[ 2017-03-27T17:07:45+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+NOTIC: [8] Undefined index: qedLogin /var/www/html/Thinkreport/Qed/Admin/Controller/CommonController.class.php 第 6 行.
+
+[ 2017-03-27T17:07:45+08:00 ] ::1 /Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-03-27T17:07:45+08:00 ] ::1 /Admin/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000043s ]
+

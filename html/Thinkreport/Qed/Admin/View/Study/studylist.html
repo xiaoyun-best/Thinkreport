@@ -1,0 +1,300 @@
+<div class="right"  id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">当前位置：
+            <a href="#">登记管理</a>
+            <span class="pull-right margin-bottom-5 gohistory" style='cursor:pointer;color:#000;'>返回上一级</span>
+        </ul>
+        <div class="title_right">
+            <span class="pull-right margin-bottom-5">
+                <input type="button" onclick='outexcel()' value="导出EXCEL" class="btn btn-info"  />
+            </span>
+            <strong>登记列表</strong>
+        </div>
+        <!--start悬浮框搜索部分-->
+        <div id="modal-container-9735581" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:600px; margin-left:-300px; top:20%">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">
+                    搜索
+                </h3>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                    <form method="get"  name='super_form' enctype="multipart/form-data">
+                        <tr>
+                            <td align="left"><input name="start_is_studydate" type="checkbox" value="1"/>起始日期</td>
+                            <td><input type="text"  style="width:156px" name='start_tblstudy_studyDate' value="{$_GET.start_tblstudy_studyDate}" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/>&nbsp;&nbsp;<!--onclick="laydate()"-->
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td align="left"><input name="end_is_studydate" type="checkbox" value="1"/>截止日期</td>
+                            <td><input type="text"  style="width:156px"  name='end_tblstudy_studyDate' value="{$_GET.end_tblstudy_studyDate}" class="Wdate"  onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><input name="is_item" type="checkbox" value="1"/>检查项目</td>
+                            <td>
+                                <select name="tblInspectionItem_ID" style="width:163px;">
+                                    <option value=""></option>
+                                    <foreach name='inspectionitem' item='item'>
+                                        <if condition="$item['tblinspectionitem_id']==$_GET['tblInspectionItem_ID']">
+                                            <option value="{$item.tblinspectionitem_id}" selected="selected">{$item.tblinspectionitem_item}</option>
+                                            <else/>
+                                            <option value="{$item.tblinspectionitem_id}">{$item.tblinspectionitem_item}</option>
+                                        </if>
+
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_sid" type="checkbox" value="1"/>检查号</td>
+                            <td><input name="tblstudy_SID" type="text" value="{$_GET.tblstudy_SID}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_name" type="checkbox" value="1"/>姓名</td>
+                            <td><input name="tblpatient_name" type="text" value="{$_GET.tblpatient_name}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_reportstate" type="checkbox" value="1"/>报告状态</td>
+                            <td>
+                                <select name="tblstudy_reportState" style="width:163px;">
+                                    <option value=""></option>
+                                    <foreach name='statuscolor' item='status'>
+                                        <if condition="$status['tblstatuscolor_id']==$_GET['tblstudy_reportState']">
+                                            <option value="{$status.tblstatuscolor_id}" selected="selected">{$status.tblstatuscolor_name}</option>
+                                            <else/>
+                                            <option value="{$status.tblstatuscolor_id}">{$status.tblstatuscolor_name}</option>
+                                        </if>
+
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_flupstate" type="checkbox" value="1"/>随访状态</td>
+                            <td>
+                                <select name="tblflup_state" style="width:163px;" >
+                                    <option value=""></option>
+                                    <foreach name='flupstate' item='flup'>
+                                        <if condition="strval($key)===$_GET['tblflup_state']">
+                                            <option value="{$key}" selected="selected">{$flup}</option>
+                                            <else/>
+                                            <option value="{$key}">{$flup}</option>
+                                        </if>
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_department" type="checkbox" value="1"/>科室</td>
+                            <td>
+                                <select name="tbldepartment_ID" style="width:163px;">
+                                    <option value=""></option>
+                                    <foreach name='department' item='depart'>
+                                        <if condition="$depart['tbldepartment_id']==$_GET['tbldepartment_ID']">
+                                            <option value="{$depart.tbldepartment_id}" selected="selected">{$depart.tbldepartment_department}</option>
+                                            <else/>
+                                            <option value="{$depart.tbldepartment_id}">{$depart.tbldepartment_department}</option>
+                                        </if>
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input name="start_is_age" type="checkbox" value="1"/>最小年龄</td>
+                            <td><input name="start_tblpatient_age" type="text" value="{$_GET.start_tblpatient_age}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="end_is_age" type="checkbox" value="1"/>最大年龄</td>
+                            <td><input name="end_tblpatient_age" type="text" value="{$_GET.end_tblpatient_age}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_clinical" type="checkbox" value="1"/>临床诊断</td>
+                            <td><input name="tblstudy_clinical" type="text" value="{$_GET.tblstudy_sid}"/ ></td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_finding" type="checkbox" value="1"/>检查所见</td>
+                            <td><input name="tblstudy_finding" type="text" value="{$_GET.tblstudy_finding}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_suggestion" type="checkbox" value="1"/>诊断意见</td>
+                            <td><input name="tblstudy_suggestion" type="text" value="{$_GET.tblstudy_suggestion}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input name="is_des" type="checkbox" value="1"/>随访结果</td>
+                            <td><input name="tblflup_Des" type="text" value="{$_GET.tblflup_Des}"/></td>
+                        </tr>
+                    </form>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-info tijiao" data-dismiss="modal" aria-hidden="true" style="width:80px">搜索</button>
+                <button class="btn btn-info" data-dismiss="modal" aria-hidden="true" style="width:80px">取消</button>
+            </div>
+        </div>
+        <!--end悬浮框搜索部分-->
+        <form method="get" name='form'>
+            <div id="trans">
+            <table style="width:100%;">
+
+                <tr align="left">
+                    <td  align="left" nowrap="nowrap" bgcolor="#f1f1f1" >
+                        <a  class="btn btn-info"  href="javascript:void(0)" onclick="tijiao1()" role="button" style="width:50px;">一天</a>&nbsp;
+                        <a  class="btn btn-info"  href="javascript:void(0)" onclick="tijiao2()" role="button" style="width:50px;">两天</a>&nbsp;
+                        <a  class="btn btn-info"  href="javascript:void(0)" onclick="tijiao3()" role="button" style="width:50px;">一周</a>&nbsp;
+                        <a  class="btn btn-info"  href="#modal-container-9735581" role="button" data-toggle="modal">高级搜索</a>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </form>
+
+        <table class="table table-bordered table-striped table-hover">
+            <tbody>
+            <tr align="center">
+                <td nowrap="nowrap" style="width:25%;"><strong>操作</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>病例号</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>姓名</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>拼音姓名</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>性别</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>年龄</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>身高</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>体重</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>电话</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>登记时间</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>检查号</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>住院号</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>床号</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>门诊号</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>影像号</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>检查类型</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>血糖(mmol/L)</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>科室</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>病区</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>检查项目</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>示踪剂</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>临床诊断</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>报告状态</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>报告医师</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>报告页数</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>审核医师</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>锁定状态</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>随访状态</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>收费情况</strong></td>
+                <td nowrap="nowrap" style="width:25%;"><strong>添加人</strong></td>
+            </tr>
+            <if condition="$list">
+                <foreach name="list" item="val">
+                    <tr align="center" class='itemChange'>
+                        <td nowrap="nowrap">
+                            <input type="hidden" class='id' value="{$val.tblstudy_id}" />&nbsp;
+                            <a href="{:U('flup/flupedit',array('tblstudy_ID'=>$val['tblstudy_id'],'tblpatient_ID'=>$val['tblpatient_id']))}" style="cursor:pointer;">【随访】</a>
+                            <a href="{:U('Medicalhistory/medicaledit',array('p_id'=>$val['tblpatient_id']))}" style="cursor:pointer;">【病史管理】</a>
+                            <a href="{:U('Study/studyedit',array('id'=>$val['tblstudy_id']))}" style="cursor:pointer;">【修改】</a>
+                            <a class='delete' style="cursor:pointer;">【删除】</a>
+                        </td>
+                        <td nowrap="nowrap">{$val['tblpatient_pid']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_name']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_pinyin']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_sex']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_birthday']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_height']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_weight']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_tel']}</td>
+                        <td nowrap="nowrap">{$val['tblpatient_tm']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_sid']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_hospitalizedid']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_sickbedid']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_outpatientid']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_imageid']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_modality']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_bloodsugarlevels']}</td>
+                        <td nowrap="nowrap">{$val['tbldepartment_department']}</td>
+                        <td nowrap="nowrap">{$val['tblinpatientarea_area']}</td>
+                        <td nowrap="nowrap">{$val['tblinspectionitem_item']}</td>
+                        <td nowrap="nowrap">{$val['tbltracer_tracer']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_clinical']}</td>
+                        <td nowrap="nowrap">{$val['tblstatuscolor_name']}</td>
+                        <td nowrap="nowrap">{$val['tblreport_doctor']}</td>
+                        <td nowrap="nowrap">{$val['repage']}</td>
+                        <td nowrap="nowrap">{$val['tblreport_checkdoctor']}</td>
+                        <td nowrap="nowrap">{$val['tblreport_islock']}</td>
+                        <td nowrap="nowrap">{$val['tblflup_state']}</td>
+                        <td nowrap="nowrap">{$val['tblstudy_ischarges']}</td>
+                        <td nowrap="nowrap">{$val['tbluser_displayname']}</td>
+                    </tr>
+                </foreach>
+                <tr align="center" class='itemChange'>
+                    <td colspan="30">{$page}</td>
+                </tr>
+                <else />
+                <tr align="center" class='itemChange'><td colspan="5" style="color:red;">暂无菜单</td></tr>
+            </if>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    //返回上一页
+    $('.gohistory').on('click',function(){
+        window.history.go(-1);
+    })
+    $('.tijiao').on('click',function(){
+        $('[name=super_form]').submit();
+    })
+    function tijiao1(){
+        $("#trans").html();
+        addShow='<input type="hidden" name="day" value="1">';
+        $("#trans").html(addShow);
+        $('[name=form]').submit();
+    }
+    function tijiao2(){
+        $("#trans").html();
+        addShow='<input type="hidden" name="day" value="2">';
+        $("#trans").html(addShow);
+        $('[name=form]').submit();
+    }
+    function tijiao3(){
+        $("#trans").html();
+        addShow='<a  class="btn btn-info" role="button" style="width:50px;">一周</a>';
+        //addShow='<input type="hidden" name="day" value="7">';
+        $("#trans").html(addShow);
+        $('[name=form]').submit();
+    }
+    $('.delete').on('click',function(){
+        if(confirm('确定要删除吗？')){
+            var id=$(this).parents('.itemChange').find('.id').val();
+            window.location.href='__URL__/del/id/'+id;
+        }
+    })
+    function outexcel() {
+        var tblpatient_birthday = '';
+        var day                      = $('[name=day]').val();
+        var start_tblstudy_studyDate = $('[name=start_tblstudy_studyDate]').val();
+        var end_tblstudy_studyDate   = $('[name=end_tblstudy_studyDate]').val();
+        var tblInspectionItem_ID     = $('[name=tblInspectionItem_ID]').val();
+        var tblstudy_SID             = $('[name=tblstudy_SID]').val();
+        var tblpatient_name          = $('[name=tblpatient_name]').val();
+        var tblstudy_reportState     = $('[name=tblstudy_reportState]').val();
+        var tblflup_state            = $('[name=tblflup_state]').val();
+        var tbldepartment_ID         = $('[name=tbldepartment_ID]').val();
+        var start_tblpatient_age     = $('[name=start_tblpatient_age]').val();
+        var end_tblpatient_age       = $('[name=end_tblpatient_age]').val();
+        var tblstudy_clinical        = $('[name=tblstudy_clinical]').val();
+        var tblstudy_finding         = $('[name=tblstudy_finding]').val();
+        var tblstudy_suggestion      = $('[name=tblstudy_suggestion]').val();
+        var tblflup_Des              = $('[name=tblflup_Des]').val();
+        window.location = '__URL__/exportStudy?day=' + day +'&start_is_studydate=1&start_tblstudy_studyDate=' + start_tblstudy_studyDate +
+            '&end_is_studydate=1&end_tblstudy_studyDate=' + end_tblstudy_studyDate + '&is_item=1&tblInspectionItem_ID=' + tblInspectionItem_ID +
+            '&is_sid=1&tblstudy_SID=' + tblstudy_SID + '&is_name=1&tblpatient_name=' + tblpatient_name + '&is_reportstate=1&tblstudy_reportState=' + tblstudy_reportState +
+            '&is_flupstate=1&tblflup_state=' + tblflup_state + '&is_department=1&tbldepartment_ID=' + tbldepartment_ID + '&start_is_age=1&start_tblpatient_age=' + start_tblpatient_age +
+            '&end_is_age=1&end_tblpatient_age=' + end_tblpatient_age + '&is_clinical=1&tblstudy_clinical=' + tblstudy_clinical + '&is_finding=1&tblstudy_finding=' + tblstudy_finding +
+            '&is_suggestion=1&tblstudy_suggestion=' + tblstudy_suggestion + '&is_des=1&tblflup_Des=' + tblflup_Des;
+    }
+</script>
+</script>

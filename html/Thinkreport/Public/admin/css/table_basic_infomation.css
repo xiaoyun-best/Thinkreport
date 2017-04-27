@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+/*———————————全局样式—————————————*/
+*{
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+body{
+	box-sizing:border-box;
+	color:#646464;
+}
+/*————————  头部样式  ————————*/
+.header{
+	height:66px;
+	width:100%;
+	min-width:998px;
+}
+.header p{
+	line-height:66px;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	}
+/*————————  基本信息-配置信息  ————————*/
+.wrap{
+	width:998px;
+	margin:0 auto;
+	}
+.contend_info p{
+	margin:20px 0 20px 0;
+	}
+.contend_info .span1{
+	width:auto;
+}
+.contend_info .span2{
+	width:auto;
+	}
+.contend_info .span3{
+	width:auto;
+}
+.user_info .text{
+	height:102px;
+	width:100%;
+	}/*————————这里用js添加默认内容  ————————*/
+.user_info .btn{
+	width:205px;
+	height:40px;
+	background:url(__PUBLIC__/admin/image/basic_infomation.png) no-repeat;
+	border:none;
+	display:block;
+	margin:10px 0 0 727px ;
+	}
+	
+.more_info{
+	margin-top:12px;
+	}	
+.more_info span{}
+.more_info .btn{
+	width:205px;
+	height:40px;
+	background:url(__PUBLIC__/admin/image/basic_infomation.png) no-repeat;
+	border:none;
+	margin-left:40px;
+	}	
+
+.save{
+	margin:50px 0 0 727px;
+	}
+.save .btn{
+	width:198px;
+	height:45px;
+	background:url(__PUBLIC__/admin/image/basic_infomation.png) no-repeat 0 -40px;
+	border:none;
+	color:#ffffff;
+	font-size:16px;
+	} 
+	
+.set_info {
+	margin-top:20px;
+	height:66px;
+	width:100%;
+	min-width:998px;
+	background:#8b8b8b;
+	}
+.set_info p{
+	line-height:66px;
+	text-align:center;
+	font-size:16px;
+	color:#ebebeb;
+	font-weight:bold;
+	}	
+	
+.safe_set p{
+	height:55px;
+	padding-left:10px;
+	line-height:55px;
+	font-weight:bold;
+	border-bottom:1px solid black;
+	}	
+
+.safe_info{
+	border-bottom:1px dotted black;
+	clear:both;
+	}	
+.safe_info	div{
+	float:left;
+	height:54px;
+	line-height:54px;
+	display: table;
+	}
+.safe_tip{
+	padding-left:20px;
+	width:270px;
+	}
+.choose{
+	width:176px;
+	}
+.choose1{width:;}
+.equip{
+	width:200px;
+	padding-left:10px;
+	}
+
+.inner_equip{
+	margin-top:100px;
+	}
+.inner_equip p{
+	height:55px;
+	padding-left:10px;
+	line-height:55px;
+	font-weight:bold;
+	border-bottom:1px solid black;
+	}
+
+.text{
+	height:20px;
+	width:120px;
+	margin-top:15px;
+	}
+
+.save2 .btn{
+	height:58px;
+	width:640px;
+	background:url(__PUBLIC__/admin/image/save2_bg.png) no-repeat;
+	color:#ffffff;
+	font-size:18px;
+	line-height:58px;
+	text-align:center;
+	border:none;
+	margin:120px 0 200px 290px;
+	}
